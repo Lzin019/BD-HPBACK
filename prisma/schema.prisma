@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Bruxo {
+  id          Int @id @default(autoincrement())
+  nome           String
+  casa           String
+  patrono        String?
+  anoMatricula   Int
+  ativo          Boolean @default(true)
+  creatdAt       DateTime @default(now())
+  updateAt       DateTime @updatedAt
+
+  @@map("bruxos")
+}
