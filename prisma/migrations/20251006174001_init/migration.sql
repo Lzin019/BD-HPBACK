@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "comidas" (
+CREATE TABLE "bruxos" (
     "id" SERIAL NOT NULL,
     "nome" TEXT NOT NULL,
     "tipo" TEXT NOT NULL,
@@ -8,5 +8,5 @@ CREATE TABLE "comidas" (
     "creatdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updateAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "comidas_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "bruxos_pkey" PRIMARY KEY ("id")
 );

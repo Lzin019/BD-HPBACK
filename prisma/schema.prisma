@@ -7,14 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Comida {
-  id          Int @id @default(autoincrement())
-  nome           String
-  tipo           String
-  preco          Float
-  descricao      String
-  creatdAt       DateTime @default(now())
-  updateAt       DateTime @updatedAt
-
-  @@map("comidas")
+model Bruxo {
+  id              Int      @id @default(autoincrement())
+  nome            String
+  casa            String
+  patrono         String?
+  varinha         String
+  anoMatricula    Int
+  ativo           Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@map("bruxos")
 }
